@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "id": "part4-pack01",
+  "sets": [
+    {
+      "id": "P4-0001",
+      "part": 4,
+      "packId": "part4-pack01",
+      "title": "A platform change",
+      "difficulty": "standard",
+      "genre": "交通案内",
+      "audio": "audio/part4/p4-0001.mp3",
+      "speakers": [
+        {
+          "id": "W",
+          "label": "Woman",
+          "voice": "en-US-AriaNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "W",
+          "text": "Attention, passengers traveling to Brookfield on the nine twenty express. Because of track maintenance near the north entrance, your train will depart from platform six instead of platform two today. The departure time has not changed. Please use the footbridge beside the ticket office to reach platform six; the underground passage is temporarily closed. Passengers who need assistance with luggage or step-free access should speak to a member of staff at the information desk. A connecting shuttle is available for passengers using wheelchairs. Please have your tickets ready before boarding, as tickets cannot be purchased on this service. We apologize for the inconvenience and thank you for your cooperation.",
+          "translation": "ブルックフィールド行き9時20分発の急行をご利用のお客様にお知らせします。北側入口付近の線路保守作業のため、本日は2番ホームではなく6番ホームから発車します。発車時刻の変更はありません。地下通路は一時閉鎖中のため、切符売り場の横の歩道橋をご利用ください。荷物の運搬や段差のない経路について支援が必要な方は、案内所の係員にお声がけください。車椅子をご利用のお客様向けに連絡シャトルを用意しています。車内では切符を購入できませんので、乗車前にご用意ください。ご不便をおかけしますが、ご協力をお願いいたします。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P4-0001-Q1",
+          "text": "Why has the boarding location changed?",
+          "options": [
+            "A train arrived late.",
+            "A ticket office is moving.",
+            "A platform is overcrowded.",
+            "Maintenance work is taking place."
+          ],
+          "answer": 3,
+          "explanation": "線路の保守作業のためホームを変更。"
+        },
+        {
+          "id": "P4-0001-Q2",
+          "text": "How should most passengers reach the new platform?",
+          "options": [
+            "By walking through the north entrance",
+            "By taking an underground passage",
+            "By using a footbridge",
+            "By boarding a shuttle bus"
+          ],
+          "answer": 2,
+          "explanation": "通常の経路は切符売り場横の歩道橋。シャトルは車椅子利用者向け。"
+        },
+        {
+          "id": "P4-0001-Q3",
+          "text": "What are passengers reminded to do?",
+          "options": [
+            "Reserve a seat online",
+            "Change trains at Brookfield",
+            "Prepare their tickets before boarding",
+            "Arrive thirty minutes early"
+          ],
+          "answer": 2,
+          "explanation": "この列車内では切符を購入できないため、乗車前に用意するよう案内。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "step-free access",
+          "japanese": "段差のないアクセス"
+        },
+        {
+          "english": "have your tickets ready",
+          "japanese": "切符を用意しておく"
+        }
+      ]
+    },
+    {
+      "id": "P4-0002",
+      "part": 4,
+      "packId": "part4-pack01",
+      "title": "A replacement appliance",
+      "difficulty": "standard",
+      "genre": "留守番電話",
+      "audio": "audio/part4/p4-0002.mp3",
+      "speakers": [
+        {
+          "id": "M",
+          "label": "Man",
+          "voice": "en-US-GuyNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "M",
+          "text": "Hello, Ms. Chen. This is David from Harbor Appliances, calling about the dishwasher you brought in on Monday. Our technician has checked it, and the replacement motor will take three weeks to arrive. Since your machine is still under warranty, we can offer you a new dishwasher of the same model at no charge instead of making you wait for the repair. We have one in our warehouse, and we can deliver it on Friday afternoon. Our driver will also collect the old unit, so please don't bring it back to the shop yourself. If Friday isn't convenient, call me before four tomorrow and we can arrange another date. You can reach me directly at extension two eighteen.",
+          "translation": "チェン様、ハーバー家電のデイビッドです。月曜にお持ちいただいた食洗機についてご連絡しました。技術者が確認したところ、交換用モーターの到着には3週間かかります。まだ保証期間内ですので、修理をお待ちいただく代わりに、同じ型の新品を無料でお渡しできます。倉庫に1台あり、金曜午後に配達可能です。配送員が古い本体も回収しますので、ご自身で店にお持ちいただく必要はありません。金曜が不都合な場合は明日の4時までにお電話ください。別の日程を調整します。直通は内線218です。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P4-0002-Q1",
+          "text": "What is the main purpose of the message?",
+          "options": [
+            "To explain a warranty renewal",
+            "To request a missing payment",
+            "To announce a store opening",
+            "To offer a replacement product"
+          ],
+          "answer": 3,
+          "explanation": "修理部品の納期が長いため、同型の新品への無償交換を提案。"
+        },
+        {
+          "id": "P4-0002-Q2",
+          "text": "Why would a repair take several weeks?",
+          "options": [
+            "The technician is on vacation.",
+            "A part is not yet available.",
+            "The store is being renovated.",
+            "The customer has not approved the cost."
+          ],
+          "answer": 1,
+          "explanation": "交換用モーターの到着まで3週間かかる。"
+        },
+        {
+          "id": "P4-0002-Q3",
+          "text": "What will the delivery driver do?",
+          "options": [
+            "Collect the old dishwasher",
+            "Install a different model",
+            "Extend the warranty",
+            "Take the customer to the shop"
+          ],
+          "answer": 0,
+          "explanation": "配達時に古い機器も回収すると説明。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "under warranty",
+          "japanese": "保証期間内で"
+        },
+        {
+          "english": "at no charge",
+          "japanese": "無料で"
+        }
+      ]
+    },
+    {
+      "id": "P4-0003",
+      "part": 4,
+      "packId": "part4-pack01",
+      "title": "A library evening event",
+      "difficulty": "standard",
+      "genre": "施設案内",
+      "audio": "audio/part4/p4-0003.mp3",
+      "speakers": [
+        {
+          "id": "W2",
+          "label": "Woman 2",
+          "voice": "en-GB-SoniaNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "W2",
+          "text": "Thank you for visiting the River Street Library. A reminder that tonight's talk by travel writer Anna Lewis will begin at six thirty in the second-floor reading room. All reserved seats have now been taken, but we have space for twenty additional guests in the rear seating area. These seats will be offered on a first-come, first-served basis from six o'clock. Please collect a numbered card from the desk near the stairs if you would like one. The talk will last approximately forty minutes, followed by questions and a book signing. Copies of Ms. Lewis's latest book are available at the entrance. The main lending desk will close at its usual time of seven, even though the event continues later.",
+          "translation": "リバーストリート図書館にご来館いただきありがとうございます。本日の旅行作家アンナ・ルイス氏の講演は、午後6時半から2階の閲覧室で開催します。予約席は満席ですが、後方席に20名追加でお入りいただけます。こちらは6時から先着順でご案内します。ご希望の方は階段付近のカウンターで番号札をお受け取りください。講演は約40分で、その後に質疑応答とサイン会があります。最新刊は入口で販売しています。催しは7時以降も続きますが、貸出カウンターは通常どおり7時に終了します。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P4-0003-Q1",
+          "text": "Who is Anna Lewis?",
+          "options": [
+            "A travel writer",
+            "A librarian",
+            "A tour guide",
+            "A bookseller"
+          ],
+          "answer": 0,
+          "explanation": "travel writer と紹介されている。"
+        },
+        {
+          "id": "P4-0003-Q2",
+          "text": "What should people without reservations do?",
+          "options": [
+            "Return the following morning",
+            "Wait outside the building",
+            "Get a numbered card",
+            "Buy two copies of a book"
+          ],
+          "answer": 2,
+          "explanation": "追加の後方席を希望する人は階段付近で番号札を受け取る。"
+        },
+        {
+          "id": "P4-0003-Q3",
+          "text": "What will happen at seven o’clock?",
+          "options": [
+            "The talk will begin.",
+            "The lending desk will close.",
+            "All visitors must leave.",
+            "The book signing will end."
+          ],
+          "answer": 1,
+          "explanation": "催しの継続にかかわらず、貸出カウンターは通常どおり7時に閉まる。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "first-come, first-served",
+          "japanese": "先着順の"
+        },
+        {
+          "english": "followed by",
+          "japanese": "その後に〜が続く"
+        }
+      ]
+    },
+    {
+      "id": "P4-0004",
+      "part": 4,
+      "packId": "part4-pack01",
+      "title": "A revised weekly report",
+      "difficulty": "standard",
+      "genre": "社内連絡",
+      "audio": "audio/part4/p4-0004.mp3",
+      "speakers": [
+        {
+          "id": "M2",
+          "label": "Man 2",
+          "voice": "en-GB-RyanNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "M2",
+          "text": "Before we finish today's meeting, I'd like to explain a small change to our weekly sales reports. Starting next Monday, please enter your figures in the shared online form rather than emailing a spreadsheet to me. The form uses the same categories, so you won't need to collect any new information. What is changing is the deadline: submissions are now due at noon on Friday, not at the end of the day. This will give the finance team enough time to review the totals before the weekend. I'll send a link and a short instruction sheet this afternoon. If you can't access the form, contact our IT desk rather than creating your own copy. For this week only, please continue using the old spreadsheet.",
+          "translation": "会議を終える前に、週次売上報告の小さな変更について説明します。来週月曜からは、表計算ファイルを私にメールする代わりに、共有オンラインフォームに数値を入力してください。項目は同じなので、新しい情報を集める必要はありません。変更されるのは締切で、金曜の終業時ではなく正午になります。これにより、経理部が週末前に合計を確認できます。本日午後にリンクと簡単な手順書を送ります。フォームにアクセスできない場合は、自分でコピーを作らずIT窓口に連絡してください。今週だけは従来の表計算ファイルを使ってください。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P4-0004-Q1",
+          "text": "What is the speaker discussing?",
+          "options": [
+            "A schedule for office repairs",
+            "A reduction in sales targets",
+            "A new employee benefit",
+            "A change in reporting procedures"
+          ],
+          "answer": 3,
+          "explanation": "売上報告の提出方法と締切の変更を説明。"
+        },
+        {
+          "id": "P4-0004-Q2",
+          "text": "Why is the deadline being moved?",
+          "options": [
+            "To avoid a system upgrade",
+            "To accommodate a customer visit",
+            "To shorten a weekly meeting",
+            "To allow time for a financial review"
+          ],
+          "answer": 3,
+          "explanation": "経理部が週末前に合計値を確認する時間を確保するため。"
+        },
+        {
+          "id": "P4-0004-Q3",
+          "text": "What should employees do this week?",
+          "options": [
+            "Use the existing spreadsheet",
+            "Submit reports on Monday",
+            "Test a new spreadsheet",
+            "Send figures directly to IT"
+          ],
+          "answer": 0,
+          "explanation": "今週だけは古い表計算ファイルを継続し、変更は来週から。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "submissions are due",
+          "japanese": "提出期限は〜である"
+        },
+        {
+          "english": "rather than",
+          "japanese": "〜ではなく"
+        }
+      ]
+    },
+    {
+      "id": "P4-0005",
+      "part": 4,
+      "packId": "part4-pack01",
+      "title": "A walking tour in the rain",
+      "difficulty": "standard",
+      "genre": "ツアー案内",
+      "audio": "audio/part4/p4-0005.mp3",
+      "speakers": [
+        {
+          "id": "W",
+          "label": "Woman",
+          "voice": "en-US-AriaNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "W",
+          "text": "Good morning, everyone, and welcome to the Old Harbor walking tour. I'm Leah, your guide. The weather forecast now predicts heavy rain around eleven, so we're going to reverse our usual route. We'll visit the outdoor market first while it's still dry, then spend the second half of the tour inside the maritime museum. Your ticket includes museum admission, but it does not include the special photography exhibition on the top floor. Anyone interested in that exhibition can purchase an additional ticket at the museum desk. We'll finish there at twelve fifteen instead of returning to this square. The museum is opposite the central bus stop, and I'll show you where to catch a bus before we go inside. Please stay together as we cross the road.",
+          "translation": "オールドハーバーの徒歩ツアーへようこそ。ガイドのリアです。最新の予報では11時ごろに大雨になるので、通常の順路を逆にします。雨が降らないうちに屋外市場を訪れ、後半は海洋博物館の中で過ごします。ツアー券に博物館の入場料は含まれますが、最上階の写真特別展は含まれません。ご希望の方は博物館の窓口で追加券をご購入ください。この広場には戻らず、12時15分に博物館で終了します。博物館は中央バス停の向かいにあり、中へ入る前に乗り場をご案内します。道を渡るときはまとまって移動してください。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P4-0005-Q1",
+          "text": "Why has the route been changed?",
+          "options": [
+            "A market has closed.",
+            "A museum is fully booked.",
+            "Rain is expected later.",
+            "A bus service is suspended."
+          ],
+          "answer": 2,
+          "explanation": "11時ごろの大雨の予報を受け、屋外市場を先に訪問する。"
+        },
+        {
+          "id": "P4-0005-Q2",
+          "text": "What requires an extra payment?",
+          "options": [
+            "The walking tour map",
+            "The photography exhibition",
+            "The regular museum admission",
+            "The guide’s bus directions"
+          ],
+          "answer": 1,
+          "explanation": "博物館の通常入場は込みだが、写真特別展は追加券が必要。"
+        },
+        {
+          "id": "P4-0005-Q3",
+          "text": "Where will the tour end?",
+          "options": [
+            "At the starting square",
+            "At the museum",
+            "Inside the market",
+            "At the railway station"
+          ],
+          "answer": 1,
+          "explanation": "博物館で12時15分に終了し、出発した広場には戻らない。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "reverse our usual route",
+          "japanese": "通常の順路を逆にする"
+        },
+        {
+          "english": "admission",
+          "japanese": "入場／入場料"
+        }
+      ]
+    },
+    {
+      "id": "P4-0006",
+      "part": 4,
+      "packId": "part4-pack01",
+      "title": "A new service for local businesses",
+      "difficulty": "standard",
+      "genre": "広告",
+      "audio": "audio/part4/p4-0006.mp3",
+      "speakers": [
+        {
+          "id": "M",
+          "label": "Man",
+          "voice": "en-US-GuyNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "M",
+          "text": "Are you spending your lunch break waiting to send parcels? Greenway Print and Post now offers a collection service for businesses in the city center. Book a collection before ten in the morning, and our driver will pick up your prepared parcels between two and four that afternoon. There is no collection fee for five or more parcels; smaller collections cost six dollars. You still pay the normal postage for each item. To get started, create a business account on our website and print your shipping labels before the driver arrives. Please note that we cannot collect items weighing more than fifteen kilograms or packages requiring refrigeration. During our first month, new account holders will receive a pack of twenty mailing envelopes at no extra cost. Visit our website for the complete list of eligible streets.",
+          "translation": "荷物を送るための待ち時間で昼休みを使っていませんか？ グリーンウェイ・プリント・アンド・ポストでは、市中心部の事業者向け集荷サービスを始めました。午前10時までに予約すると、その日の午後2時から4時の間に配送員が準備済みの荷物を引き取ります。5個以上なら集荷料金は無料、それ未満なら6ドルです。各荷物の通常の送料は別途必要です。まずウェブサイトで事業者アカウントを作り、到着前に配送ラベルを印刷してください。15キロを超える荷物や冷蔵が必要な荷物は集荷できません。初月は新規登録者に発送用封筒20枚を無料で差し上げます。対象の通りの一覧はウェブサイトでご確認ください。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P4-0006-Q1",
+          "text": "Who is the service intended for?",
+          "options": [
+            "Travelers arriving at an airport",
+            "Refrigerated food suppliers only",
+            "Residents outside the city",
+            "Businesses in the city center"
+          ],
+          "answer": 3,
+          "explanation": "市中心部の事業者向けと明示。"
+        },
+        {
+          "id": "P4-0006-Q2",
+          "text": "When is the collection fee waived?",
+          "options": [
+            "When at least five parcels are collected",
+            "When an account is a year old",
+            "When postage is paid in cash",
+            "When a parcel weighs fifteen kilograms"
+          ],
+          "answer": 0,
+          "explanation": "5個以上で集荷料が無料。送料まで無料になるわけではない。"
+        },
+        {
+          "id": "P4-0006-Q3",
+          "text": "What must customers do before the driver arrives?",
+          "options": [
+            "Call every recipient",
+            "Collect free envelopes from a store",
+            "Print shipping labels",
+            "Weigh the delivery vehicle"
+          ],
+          "answer": 2,
+          "explanation": "事前にアカウントを作成し、配送ラベルを印刷する必要がある。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "at no extra cost",
+          "japanese": "追加料金なしで"
+        },
+        {
+          "english": "eligible",
+          "japanese": "対象となる／条件を満たす"
+        }
+      ]
+    }
+  ]
+}

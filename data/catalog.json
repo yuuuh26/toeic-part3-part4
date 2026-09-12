@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {
+      "id": "part3-pack01",
+      "part": 3,
+      "title": "Part 3 · Starter",
+      "path": "data/part3/pack01.json",
+      "setCount": 6,
+      "questionCount": 18,
+      "revision": 1
+    },
+    {
+      "id": "part4-pack01",
+      "part": 4,
+      "title": "Part 4 · Starter",
+      "path": "data/part4/pack01.json",
+      "setCount": 6,
+      "questionCount": 18,
+      "revision": 1
+    }
+  ]
+}

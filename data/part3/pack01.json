@@ -1,0 +1,602 @@
+{
+  "schemaVersion": 1,
+  "id": "part3-pack01",
+  "sets": [
+    {
+      "id": "P3-0001",
+      "part": 3,
+      "packId": "part3-pack01",
+      "title": "A delivery before the opening",
+      "difficulty": "standard",
+      "genre": "店舗・配送",
+      "audio": "audio/part3/p3-0001.mp3",
+      "speakers": [
+        {
+          "id": "M",
+          "label": "Man",
+          "voice": "en-US-GuyNeural"
+        },
+        {
+          "id": "W",
+          "label": "Woman",
+          "voice": "en-US-AriaNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "W",
+          "text": "Hi, Daniel. The display tables for our new shop were supposed to arrive this morning, but the tracking page now says Thursday. We open on Wednesday. Have you heard from the supplier?",
+          "translation": "ダニエル、新店舗の展示台は今朝届く予定だったのに、追跡ページでは木曜になっているの。開店は水曜よ。納入業者から連絡はあった？"
+        },
+        {
+          "speaker": "M",
+          "text": "Yes. Their truck broke down. They can send half the order tomorrow with another carrier, but there's an extra delivery charge.",
+          "translation": "あったよ。トラックが故障したそうだ。別の配送会社なら半分を明日送れるけど、追加料金がかかる。"
+        },
+        {
+          "speaker": "W",
+          "text": "Half would be enough for the front window. Could we borrow the folding tables from our other branch for the rest?",
+          "translation": "半分あれば正面のウインドーには足りるわ。残りは別の支店から折りたたみ式の台を借りられるかしら？"
+        },
+        {
+          "speaker": "M",
+          "text": "Good idea. I'll ask their manager. Can you approve the additional charge so I can confirm the shipment?",
+          "translation": "いいね。支店長に聞いてみる。配送を確定できるよう、追加料金を承認してくれる？"
+        },
+        {
+          "speaker": "W",
+          "text": "Of course. Send me the amount first. I'll update the window plan while you make that call.",
+          "translation": "もちろん。先に金額を送って。あなたが電話している間に、展示計画を直しておくわ。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P3-0001-Q1",
+          "text": "What problem are the speakers discussing?",
+          "options": [
+            "A shop has lost its lease.",
+            "Some furniture will arrive late.",
+            "A window needs to be repaired.",
+            "A branch has ordered too many tables."
+          ],
+          "answer": 1,
+          "explanation": "配送予定が木曜に変わった一方、開店は水曜。展示台の到着遅延が問題。"
+        },
+        {
+          "id": "P3-0001-Q2",
+          "text": "Why does the woman mention the other branch?",
+          "options": [
+            "To request a permanent transfer",
+            "To recommend a new supplier",
+            "To explain a delivery address",
+            "To suggest a temporary solution"
+          ],
+          "answer": 3,
+          "explanation": "他支店の折りたたみ台を借り、開店時に足りない台を補う提案。"
+        },
+        {
+          "id": "P3-0001-Q3",
+          "text": "What will the man most likely do next?",
+          "options": [
+            "Call another store manager",
+            "Cancel the entire order",
+            "Redesign a display",
+            "Repair a delivery truck"
+          ],
+          "answer": 0,
+          "explanation": "男性は別支店の責任者に台を借りられるか確認すると述べている。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "be supposed to",
+          "japanese": "〜する予定である"
+        },
+        {
+          "english": "an additional charge",
+          "japanese": "追加料金"
+        }
+      ]
+    },
+    {
+      "id": "P3-0002",
+      "part": 3,
+      "packId": "part3-pack01",
+      "title": "Moving a workshop",
+      "difficulty": "standard",
+      "genre": "会議・予約",
+      "audio": "audio/part3/p3-0002.mp3",
+      "speakers": [
+        {
+          "id": "W",
+          "label": "Woman",
+          "voice": "en-US-AriaNeural"
+        },
+        {
+          "id": "W2",
+          "label": "Woman 2",
+          "voice": "en-GB-SoniaNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "W",
+          "text": "Sophie, we have thirty-two registrations for Friday's workshop now. The small training room only seats twenty-four. Is the larger room available?",
+          "translation": "ソフィー、金曜の研修の申込者が32人になったの。小研修室は24席しかないわ。大きい部屋は空いている？"
+        },
+        {
+          "speaker": "W2",
+          "text": "The sales team has booked it until eleven. Your workshop starts at ten, doesn't it? We could use the conference center across the street, though it would cost more.",
+          "translation": "営業部が11時まで予約しているわ。研修は10時開始よね？ 通りの向かいの会議施設も使えるけど、費用が増えるわ。"
+        },
+        {
+          "speaker": "W",
+          "text": "I'd rather stay here. Our guest speaker doesn't arrive until eleven thirty anyway. The first hour was just going to be introductions.",
+          "translation": "ここで開催したいわ。ゲスト講師が来るのも11時半だし、最初の1時間は自己紹介だけの予定だったから。"
+        },
+        {
+          "speaker": "W2",
+          "text": "Then why not start at eleven fifteen? That gives us fifteen minutes to rearrange the chairs. I can reserve the room from eleven.",
+          "translation": "それなら11時15分開始はどう？ 椅子を並べ替える時間が15分あるわ。11時から予約しておくね。"
+        },
+        {
+          "speaker": "W",
+          "text": "That works. I'll email everyone the new start time and ask the catering company to deliver lunch half an hour later.",
+          "translation": "それでいいわ。全員に開始時間の変更をメールして、仕出し業者には昼食を30分遅く届けてもらうね。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P3-0002-Q1",
+          "text": "Why do the speakers need a different room?",
+          "options": [
+            "The equipment is broken.",
+            "A speaker requested a stage.",
+            "More people have registered than expected.",
+            "The original room is being painted."
+          ],
+          "answer": 2,
+          "explanation": "申込者32人に対し元の部屋は24席なので、より広い部屋が必要。"
+        },
+        {
+          "id": "P3-0002-Q2",
+          "text": "What does the first woman mean when she says, \"I’d rather stay here\"?",
+          "options": [
+            "She prefers not to rent an outside venue.",
+            "She wants to remain at her desk.",
+            "She cannot attend the workshop.",
+            "She plans to move her office."
+          ],
+          "answer": 0,
+          "explanation": "外部会議施設の提案に対し、自社内で開催したい意向を示している。"
+        },
+        {
+          "id": "P3-0002-Q3",
+          "text": "What time will the workshop begin?",
+          "options": [
+            "10:00",
+            "11:00",
+            "11:15",
+            "11:30"
+          ],
+          "answer": 2,
+          "explanation": "11時15分開始の提案に That works と同意。11時は会場予約開始、11時半は講師到着。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "rearrange the chairs",
+          "japanese": "椅子を並べ替える"
+        },
+        {
+          "english": "That works.",
+          "japanese": "それで大丈夫です。"
+        }
+      ]
+    },
+    {
+      "id": "P3-0003",
+      "part": 3,
+      "packId": "part3-pack01",
+      "title": "A revised product photograph",
+      "difficulty": "standard",
+      "genre": "広告・制作",
+      "audio": "audio/part3/p3-0003.mp3",
+      "speakers": [
+        {
+          "id": "M",
+          "label": "Man",
+          "voice": "en-US-GuyNeural"
+        },
+        {
+          "id": "M2",
+          "label": "Man 2",
+          "voice": "en-GB-RyanNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "M",
+          "text": "Oliver, have you seen the draft for the new backpack advertisement? The headline looks great, but the photograph still shows last year's model.",
+          "translation": "オリバー、新しいリュックの広告案を見た？ 見出しはいいけど、写真がまだ去年のモデルだよ。"
+        },
+        {
+          "speaker": "M2",
+          "text": "Really? I used the folder the product team shared on Monday. I thought those were the approved images.",
+          "translation": "そうなの？ 商品部が月曜に共有したフォルダーを使ったんだ。承認済みの写真だと思っていたよ。"
+        },
+        {
+          "speaker": "M",
+          "text": "They added a new folder yesterday. The current model has a side pocket for a water bottle. That's actually the main feature we're promoting.",
+          "translation": "昨日新しいフォルダーが追加されたんだ。現行モデルには水筒用のサイドポケットがある。それが今回の主な訴求点なんだよ。"
+        },
+        {
+          "speaker": "M2",
+          "text": "I see. I'll replace the photo. Do we still need to send the final version to the magazine by noon?",
+          "translation": "わかった。写真を差し替えるよ。雑誌社への最終版送付は、やっぱり正午まで？"
+        },
+        {
+          "speaker": "M",
+          "text": "They've given us until three, but I'd like to review it at two. Please keep the headline as it is and make sure the pocket is clearly visible.",
+          "translation": "3時まで延ばしてくれたけど、2時には確認したい。見出しはそのままにして、ポケットがはっきり見えるようにしてね。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P3-0003-Q1",
+          "text": "What needs to be changed in the advertisement?",
+          "options": [
+            "The product name",
+            "The headline",
+            "The magazine logo",
+            "The photograph"
+          ],
+          "answer": 3,
+          "explanation": "去年のモデルが写っているため、写真の差し替えが必要。"
+        },
+        {
+          "id": "P3-0003-Q2",
+          "text": "What feature is being emphasized?",
+          "options": [
+            "A lower price",
+            "A pocket for a bottle",
+            "A wider shoulder strap",
+            "A longer warranty"
+          ],
+          "answer": 1,
+          "explanation": "水筒用サイドポケットを main feature と説明している。"
+        },
+        {
+          "id": "P3-0003-Q3",
+          "text": "When does the first man want to review the revision?",
+          "options": [
+            "At noon",
+            "At one o’clock",
+            "At two o’clock",
+            "At three o’clock"
+          ],
+          "answer": 2,
+          "explanation": "雑誌社の締切は3時だが、男性が確認したいのは2時。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "the final version",
+          "japanese": "最終版"
+        },
+        {
+          "english": "as it is",
+          "japanese": "そのままで"
+        }
+      ]
+    },
+    {
+      "id": "P3-0004",
+      "part": 3,
+      "packId": "part3-pack01",
+      "title": "A demonstration without a network",
+      "difficulty": "standard",
+      "genre": "展示会・技術",
+      "audio": "audio/part3/p3-0004.mp3",
+      "speakers": [
+        {
+          "id": "W",
+          "label": "Woman",
+          "voice": "en-US-AriaNeural"
+        },
+        {
+          "id": "M",
+          "label": "Man",
+          "voice": "en-US-GuyNeural"
+        },
+        {
+          "id": "W2",
+          "label": "Woman 2",
+          "voice": "en-GB-SoniaNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "W",
+          "text": "Before the visitors arrive, let's check the demonstration. Eric, is the inventory app running on the tablet?",
+          "translation": "来場者が来る前にデモを確認しましょう。エリック、タブレットで在庫管理アプリは動いている？"
+        },
+        {
+          "speaker": "M",
+          "text": "The app is fine, but the wireless network keeps disconnecting. If that happens during the live search, the screen will freeze.",
+          "translation": "アプリは大丈夫ですが、無線ネットワークが何度も切れます。検索の実演中に切れると画面が止まってしまいます。"
+        },
+        {
+          "speaker": "W2",
+          "text": "I saved a sample database on the tablet yesterday. We can demonstrate the search without connecting to the server. The numbers won't be current, though.",
+          "translation": "昨日サンプルのデータベースをタブレットに保存しました。サーバーにつながなくても検索を実演できます。ただし数値は最新ではありません。"
+        },
+        {
+          "speaker": "W",
+          "text": "That's fine as long as we explain that it's sample data. Eric, switch to that version. Nina, could you put a small note beside the tablet?",
+          "translation": "サンプルデータだと説明すれば大丈夫です。エリック、その版に切り替えて。ニナ、タブレットの横に小さな注意書きを置いてくれる？"
+        },
+        {
+          "speaker": "M",
+          "text": "Sure. It loads much faster this way, too. We should be ready in five minutes.",
+          "translation": "はい。この方法だと読み込みもずっと速いです。5分で準備できそうです。"
+        },
+        {
+          "speaker": "W2",
+          "text": "I'll print the note now. I'll also bring a spare charging cable from the office.",
+          "translation": "今、注意書きを印刷します。オフィスから予備の充電ケーブルも持ってきます。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P3-0004-Q1",
+          "text": "What are the speakers preparing for?",
+          "options": [
+            "A software demonstration",
+            "A staff interview",
+            "A warehouse delivery",
+            "A network maintenance course"
+          ],
+          "answer": 0,
+          "explanation": "来場者に在庫管理アプリを見せるデモの準備。"
+        },
+        {
+          "id": "P3-0004-Q2",
+          "text": "How will they address the connection problem?",
+          "options": [
+            "By delaying the visitors",
+            "By using locally saved data",
+            "By moving to another office",
+            "By replacing the tablet"
+          ],
+          "answer": 1,
+          "explanation": "タブレット内に保存したサンプルデータを使い、接続なしで実演する。"
+        },
+        {
+          "id": "P3-0004-Q3",
+          "text": "What is Nina asked to do?",
+          "options": [
+            "Update the inventory figures",
+            "Lead a five-minute meeting",
+            "Repair the wireless router",
+            "Prepare a notice"
+          ],
+          "answer": 3,
+          "explanation": "Nina, could you put a small note... が依頼。充電ケーブルは本人が追加で提案した行動。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "as long as",
+          "japanese": "〜する限り／〜という条件なら"
+        },
+        {
+          "english": "a spare charging cable",
+          "japanese": "予備の充電ケーブル"
+        }
+      ]
+    },
+    {
+      "id": "P3-0005",
+      "part": 3,
+      "packId": "part3-pack01",
+      "title": "Choosing a train after a meeting",
+      "difficulty": "standard",
+      "genre": "出張・交通",
+      "audio": "audio/part3/p3-0005.mp3",
+      "speakers": [
+        {
+          "id": "M",
+          "label": "Man",
+          "voice": "en-US-GuyNeural"
+        },
+        {
+          "id": "W",
+          "label": "Woman",
+          "voice": "en-US-AriaNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "M",
+          "text": "Our client meeting in Westport has been moved to Thursday afternoon. I was going to drive, but the hotel charges quite a lot for overnight parking.",
+          "translation": "ウェストポートでの顧客との会議が木曜午後に変わったんだ。車で行くつもりだったけど、ホテルの一晩の駐車料金がかなり高いんだよ。"
+        },
+        {
+          "speaker": "W",
+          "text": "Why don't we take the train? There's one at eight forty that gets in just before eleven. The client's office is a short walk from the station.",
+          "translation": "電車にしない？ 8時40分発で11時少し前に着く便があるわ。顧客のオフィスは駅から歩いてすぐよ。"
+        },
+        {
+          "speaker": "M",
+          "text": "That sounds better. Can we get a flexible return ticket? Last time the discussion ran an hour longer than planned.",
+          "translation": "その方がいいね。帰りは変更できる切符にできるかな？ 前回は話し合いが予定より1時間長引いたから。"
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, but it's cheaper if we book today. I'll check whether our travel account covers the flexible fare.",
+          "translation": "できるけど、今日予約すると安いの。会社の出張用アカウントで変更可能な運賃を購入できるか確認するね。"
+        },
+        {
+          "speaker": "M",
+          "text": "Thanks. Once you know, send me the total. I'll ask our supervisor to approve it before the end of the day.",
+          "translation": "ありがとう。わかったら合計金額を送って。今日中に上司に承認してもらうよ。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P3-0005-Q1",
+          "text": "Why does the man reconsider driving?",
+          "options": [
+            "The roads will be closed.",
+            "His car needs repairs.",
+            "He has lost his license.",
+            "The parking fee is high."
+          ],
+          "answer": 3,
+          "explanation": "ホテルの一晩の駐車料金が高いことが理由。"
+        },
+        {
+          "id": "P3-0005-Q2",
+          "text": "What concern does the man express about the return trip?",
+          "options": [
+            "The last train is fully booked.",
+            "The meeting may finish late.",
+            "The station is difficult to find.",
+            "The client will need a ride."
+          ],
+          "answer": 1,
+          "explanation": "前回の話し合いが1時間長引いたため、変更可能な帰りの切符を希望。"
+        },
+        {
+          "id": "P3-0005-Q3",
+          "text": "What will the woman check?",
+          "options": [
+            "Whether a hotel room is available",
+            "Whether the client can meet on Wednesday",
+            "Whether a fare can be purchased through their account",
+            "Whether a supervisor can join the trip"
+          ],
+          "answer": 2,
+          "explanation": "travel account covers the flexible fare の確認をすると述べている。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "run longer than planned",
+          "japanese": "予定より長引く"
+        },
+        {
+          "english": "a flexible return ticket",
+          "japanese": "変更可能な帰りの切符"
+        }
+      ]
+    },
+    {
+      "id": "P3-0006",
+      "part": 3,
+      "packId": "part3-pack01",
+      "title": "Changing a lunch order",
+      "difficulty": "standard",
+      "genre": "飲食・社内行事",
+      "audio": "audio/part3/p3-0006.mp3",
+      "speakers": [
+        {
+          "id": "W",
+          "label": "Woman",
+          "voice": "en-US-AriaNeural"
+        },
+        {
+          "id": "M",
+          "label": "Man",
+          "voice": "en-US-GuyNeural"
+        },
+        {
+          "id": "M2",
+          "label": "Man 2",
+          "voice": "en-GB-RyanNeural"
+        }
+      ],
+      "transcript": [
+        {
+          "speaker": "W",
+          "text": "I've just received the lunch order for tomorrow's orientation. There are eighteen sandwiches, but four of our new employees requested vegetarian meals.",
+          "translation": "明日の新人研修用ランチの注文内容が届きました。サンドイッチは18個ですが、新入社員4人がベジタリアン用を希望しています。"
+        },
+        {
+          "speaker": "M",
+          "text": "I put that in the online form. Does the confirmation list the fillings?",
+          "translation": "オンラインフォームに入力しましたよ。確認書に具材は載っていますか？"
+        },
+        {
+          "speaker": "W",
+          "text": "It only says assorted sandwiches. I don't want to find out tomorrow that they're all chicken or tuna.",
+          "translation": "サンドイッチ各種、としか書かれていません。明日になって全部チキンやツナだったとわかるのは困ります。"
+        },
+        {
+          "speaker": "M2",
+          "text": "I know the bakery owner. I'll call and confirm that four are vegetarian. Should I also ask them to label the boxes individually?",
+          "translation": "私はパン屋のオーナーを知っています。電話して4個がベジタリアン用か確認します。箱ごとにラベルを付けてもらうようにも頼みましょうか？"
+        },
+        {
+          "speaker": "W",
+          "text": "Yes, please. And delivery should be to the reception desk, not the training room. The room will be locked until ten thirty.",
+          "translation": "お願いします。それと配達先は研修室ではなく受付です。部屋は10時半まで施錠されています。"
+        },
+        {
+          "speaker": "M",
+          "text": "I'll let reception know. We have enough drinks already, so there's no need to add any to the order.",
+          "translation": "受付に伝えておきます。飲み物は十分あるので、注文への追加は不要です。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "P3-0006-Q1",
+          "text": "What is unclear about the order?",
+          "options": [
+            "What kinds of sandwiches will be provided",
+            "Whether drinks are included",
+            "How many employees will attend",
+            "Which day the food will arrive"
+          ],
+          "answer": 0,
+          "explanation": "確認書に具材の詳細がなく、ベジタリアン用が入っているか不明。"
+        },
+        {
+          "id": "P3-0006-Q2",
+          "text": "What does the second man offer to do?",
+          "options": [
+            "Unlock the training room",
+            "Contact the bakery",
+            "Collect the food himself",
+            "Buy additional drinks"
+          ],
+          "answer": 1,
+          "explanation": "パン屋のオーナーを知る2人目の男性が、電話で確認すると申し出る。"
+        },
+        {
+          "id": "P3-0006-Q3",
+          "text": "Where should the food be delivered?",
+          "options": [
+            "To the reception desk",
+            "To the training room",
+            "To the staff kitchen",
+            "To the bakery entrance"
+          ],
+          "answer": 0,
+          "explanation": "配達先は受付と明言。研修室は10時半まで施錠されている。"
+        }
+      ],
+      "expressions": [
+        {
+          "english": "assorted sandwiches",
+          "japanese": "各種サンドイッチ"
+        },
+        {
+          "english": "label individually",
+          "japanese": "個別にラベルを付ける"
+        }
+      ]
+    }
+  ]
+}
