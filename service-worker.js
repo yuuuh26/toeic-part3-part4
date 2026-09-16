@@ -1,4 +1,4 @@
-const SHELL='listening-studio-shell-v11',PACKS='listening-studio-packs-v1';
+const SHELL='listening-studio-shell-v12',PACKS='listening-studio-packs-v1';
 const BASE=new URL('./',self.location.href);const SHELL_FILES=['./','index.html','css/style.css','js/app.js','js/player.js','js/storage.js','js/question-loader.js','js/offline.js','js/pronunciation.js','js/audio-segments.js','js/version.js','data/catalog.json','manifest.json','icons/icon.svg','icons/icon-192.png','icons/icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(SHELL).then(c=>c.addAll(SHELL_FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('listening-studio-shell-')&&key!==SHELL)await caches.delete(key);await self.clients.claim();})()));
