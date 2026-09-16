@@ -40,3 +40,18 @@ export function detectTranscriptSegments(samples,sampleRate,texts){
   if(boundaries.length!==count-1)return[];
   return boundaries.map((end,i)=>({start:i===0?0:boundaries[i-1],end})).concat({start:boundaries.at(-1),end:total});
 }
+
+
+export function splitSpeakingChunks(text,maxSentences=3){
+  const sentences=String(text??'').trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(s=>s.trim()).filter(Boolean)??[];
+  if(!sentences.length)return[];
+  const chunks=[];
+  for(let i=0;i<sentences.length;){
+    const remaining=sentences.length-i;
+    let take=Math.min(maxSentences,remaining);
+    if(remaining===4&&maxSentences>=3)take=2;
+    chunks.push(sentences.slice(i,i+take).join(' '));
+    i+=take;
+  }
+  return chunks;
+}
