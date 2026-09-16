@@ -1,10 +1,10 @@
-import {catalog,partSets,chooseSets} from './question-loader.js';
-import {allAnswers,summarize,recordAttempt,getSetting,setSetting} from './storage.js';
-import {Player} from './player.js';
-import {downloadPack,packState} from './offline.js';
-import {evaluatePronunciation,mergeRecognizedSpeech} from './pronunciation.js';
-import {detectTranscriptSegments,splitSpeakingChunks} from './audio-segments.js';
-import {APP_VERSION} from './version.js';
+import {catalog,partSets,chooseSets} from './question-loader.js?v=1.1.2';
+import {allAnswers,summarize,recordAttempt,getSetting,setSetting} from './storage.js?v=1.1.2';
+import {Player} from './player.js?v=1.1.2';
+import {downloadPack,packState} from './offline.js?v=1.1.2';
+import {evaluatePronunciation,mergeRecognizedSpeech} from './pronunciation.js?v=1.1.2';
+import {detectTranscriptSegments,splitSpeakingChunks} from './audio-segments.js?v=1.1.2';
+import {APP_VERSION} from './version.js?v=1.1.2';
 const root=document.querySelector('#app'),player=new Player();let c,rows=[],prefs={part:3,filter:'all',order:'sequential',mode:'instant',rate:1,thinking:'on'},queue=[],index=0,answers=[],graded=false,ended=false,attemptId='',saving=false,view='home',timer=null,dbAvailable=true;
 const esc=v=>String(v??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const fmt=n=>`${Math.floor((Number.isFinite(n)?n:0)/60).toString().padStart(2,'0')}:${Math.floor((Number.isFinite(n)?n:0)%60).toString().padStart(2,'0')}`;
