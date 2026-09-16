@@ -6,7 +6,7 @@
   "scripts": {
     "validate": "python3 scripts/validate.py",
     "serve": "python3 -m http.server 8000",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --check js/app.js && node --test tests/*.test.mjs"
   },
   "devDependencies": {
     "fake-indexeddb": "6.2.5"
