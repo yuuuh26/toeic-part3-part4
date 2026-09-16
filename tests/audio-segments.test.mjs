@@ -25,8 +25,14 @@ test('returns an empty result when boundaries cannot be resolved',()=>{
 });
 
 
-test('speaking chunks stay within one to three sentences',()=>{
-  assert.deepEqual(splitSpeakingChunks('One. Two. Three. Four.'),['One. Two.','Three. Four.']);
-  assert.deepEqual(splitSpeakingChunks('One. Two. Three.'),['One. Two. Three.']);
+test('speaking chunks use short sentence and clause units',()=>{
+  assert.deepEqual(splitSpeakingChunks('One. Two. Three. Four.'),['One.','Two.','Three.','Four.']);
+  assert.deepEqual(
+    splitSpeakingChunks('Because of track maintenance near the north entrance, your train will depart from platform six instead of platform two today.'),
+    ['Because of track maintenance near the north entrance,','your train will depart from platform six instead of platform two today.']
+  );
+  const chunks=splitSpeakingChunks('Please keep the headline as it is and make sure the pocket is clearly visible so customers notice the feature right away.');
+  assert(chunks.length>=2);
+  assert(chunks.every(chunk=>chunk.split(/\s+/).length<=15));
   assert.deepEqual(splitSpeakingChunks('One.'),['One.']);
 });
