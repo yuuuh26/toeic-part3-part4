@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {normalizeSpeech,scorePronunciation,pronunciationBand,evaluatePronunciation} from '../js/pronunciation.js';
+import {normalizeSpeech,scorePronunciation,pronunciationBand,evaluatePronunciation,mergeRecognizedSpeech} from '../js/pronunciation.js';
 
 test('pronunciation normalization absorbs common contractions and punctuation',()=>{
   assert.equal(normalizeSpeech("I'm ready, aren't you?"),'i am ready are not you');
@@ -23,4 +23,12 @@ test('best recognition alternative is selected',()=>{
   ]);
   assert.equal(r.label,'PERFECT');
   assert.match(r.transcript,/updated schedule/);
+});
+
+
+test('speech merge removes repeated and overlapping recognition text',()=>{
+  assert.equal(mergeRecognizedSpeech('I need to check','check the schedule'),'I need to check the schedule');
+  assert.equal(mergeRecognizedSpeech('I need to check','I need to check'),'I need to check');
+  assert.equal(mergeRecognizedSpeech('I need to check','I need to check the schedule'),'I need to check the schedule');
+  assert.equal(mergeRecognizedSpeech('Please send me','me the updated file'),'Please send me the updated file');
 });
