@@ -42,16 +42,45 @@ export function detectTranscriptSegments(samples,sampleRate,texts){
 }
 
 
-export function splitSpeakingChunks(text,maxSentences=3){
+function wordCount(text){return String(text??'').trim().split(/\s+/).filter(Boolean).length;}
+
+function splitLongSpeakingUnit(text,maxWords){
+  const words=String(text??'').trim().split(/\s+/).filter(Boolean),chunks=[];
+  let rest=words;
+  while(rest.length>maxWords){
+    let cut=maxWords;
+    const lower=Math.max(4,Math.floor(maxWords*.58));
+    for(let i=maxWords-1;i>=lower;i--){
+      const token=rest[i]?.toLowerCase().replace(/^[("'“‘]+|[)"'”’.,;:!?]+$/g,'');
+      if(/^(and|but|or|because|so|if|when|while|although|though|since|which|who|that)$/.test(token)){cut=i;break;}
+    }
+    if(cut<1)cut=maxWords;
+    chunks.push(rest.slice(0,cut).join(' '));
+    rest=rest.slice(cut);
+  }
+  if(rest.length){
+    const tail=rest.join(' ');
+    if(chunks.length&&rest.length<4&&wordCount(chunks.at(-1))+rest.length<=maxWords+3)chunks[chunks.length-1]+=' '+tail;
+    else chunks.push(tail);
+  }
+  return chunks;
+}
+
+export function splitSpeakingChunks(text,maxWords=12){
   const sentences=String(text??'').trim().match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(s=>s.trim()).filter(Boolean)??[];
   if(!sentences.length)return[];
   const chunks=[];
-  for(let i=0;i<sentences.length;){
-    const remaining=sentences.length-i;
-    let take=Math.min(maxSentences,remaining);
-    if(remaining===4&&maxSentences>=3)take=2;
-    chunks.push(sentences.slice(i,i+take).join(' '));
-    i+=take;
+  for(const sentence of sentences){
+    const clauses=sentence.match(/[^,;:]+[,;:]?|[^,;:]+$/g)?.map(s=>s.trim()).filter(Boolean)??[sentence];
+    let pending='';
+    const flush=()=>{if(pending){chunks.push(...splitLongSpeakingUnit(pending,maxWords));pending='';}};
+    for(const clause of clauses){
+      const candidate=pending?pending+' '+clause:clause;
+      if(pending&&wordCount(candidate)>maxWords+2){flush();pending=clause;}
+      else pending=candidate;
+      if(wordCount(pending)>=maxWords)flush();
+    }
+    flush();
   }
   return chunks;
 }
