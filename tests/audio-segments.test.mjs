@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {detectTranscriptSegments} from '../js/audio-segments.js';
+import {detectTranscriptSegments,splitSpeakingChunks} from '../js/audio-segments.js';
 
 function synthetic(durations,sr=1000){
   const samples=[];let phase=0;
@@ -22,4 +22,11 @@ test('detects transcript boundaries from inserted silence gaps',()=>{
 test('returns an empty result when boundaries cannot be resolved',()=>{
   const sr=1000,samples=new Float32Array(2500).fill(.1);
   assert.deepEqual(detectTranscriptSegments(samples,sr,['a','b','c']),[]);
+});
+
+
+test('speaking chunks stay within one to three sentences',()=>{
+  assert.deepEqual(splitSpeakingChunks('One. Two. Three. Four.'),['One. Two.','Three. Four.']);
+  assert.deepEqual(splitSpeakingChunks('One. Two. Three.'),['One. Two. Three.']);
+  assert.deepEqual(splitSpeakingChunks('One.'),['One.']);
 });
