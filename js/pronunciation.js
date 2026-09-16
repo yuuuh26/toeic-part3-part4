@@ -15,6 +15,38 @@ export function normalizeSpeech(text){
   return s.replace(/[^a-z0-9\s']/g,' ').replace(/'/g,'').replace(/\s+/g,' ').trim();
 }
 
+export function mergeRecognizedSpeech(existing,incoming){
+  const a=String(existing??'').trim(),b=String(incoming??'').trim();
+  if(!a)return b;
+  if(!b)return a;
+  const rawA=a.split(/\s+/),rawB=b.split(/\s+/);
+  const normToken=v=>normalizeSpeech(v);
+  const na=rawA.map(normToken),nb=rawB.map(normToken);
+  const cleanA=na.filter(Boolean),cleanB=nb.filter(Boolean);
+  if(!cleanA.length)return b;
+  if(!cleanB.length)return a;
+  const normA=cleanA.join(' '),normB=cleanB.join(' ');
+  if(normA===normB||normA.endsWith(normB))return a;
+  if(normB.startsWith(normA))return b;
+  const max=Math.min(cleanA.length,cleanB.length);
+  let overlap=0;
+  for(let n=max;n>=1;n--){
+    let same=true;
+    for(let i=0;i<n;i++)if(cleanA[cleanA.length-n+i]!==cleanB[i]){same=false;break;}
+    if(same){overlap=n;break;}
+  }
+  if(overlap){
+    let consumed=0,cut=0;
+    for(let i=0;i<rawB.length;i++){
+      if(normToken(rawB[i]))consumed++;
+      if(consumed===overlap){cut=i+1;break;}
+    }
+    const tail=rawB.slice(cut).join(' ').trim();
+    return tail?`${a} ${tail}`:a;
+  }
+  return `${a} ${b}`.replace(/\s+/g,' ').trim();
+}
+
 function editDistance(a,b){
   const prev=Array.from({length:b.length+1},(_,i)=>i),cur=new Array(b.length+1);
   for(let i=1;i<=a.length;i++){
