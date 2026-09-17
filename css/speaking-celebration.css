@@ -1,0 +1,260 @@
+/* Full-screen speaking score celebration enhancement.
+   Keeps scoring / speech-recognition logic untouched and only intensifies
+   the existing GOOD / GREAT / EXCELLENT / PERFECT overlay. */
+
+.speaking-reward-overlay{
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 50% 48%,rgba(16,25,58,.9) 0,rgba(8,10,30,.74) 34%,rgba(2,3,12,.35) 68%,rgba(0,0,0,.08) 100%);
+}
+.speaking-reward-overlay::before,
+.speaking-reward-overlay::after{
+  content:"";
+  position:absolute;
+  inset:-18vmax;
+  pointer-events:none;
+  z-index:1;
+}
+.speaking-reward-overlay::before{
+  background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.92) 0,rgba(117,245,255,.34) 9%,rgba(157,82,255,.18) 22%,transparent 48%);
+  mix-blend-mode:screen;
+  animation:speakingMegaFlash 1.15s ease-out both;
+}
+.speaking-reward-overlay::after{
+  background:repeating-conic-gradient(from -18deg,rgba(255,255,255,.12) 0 2.5deg,transparent 2.5deg 10deg);
+  mix-blend-mode:screen;
+  opacity:0;
+  animation:speakingMegaSweep 2.65s cubic-bezier(.16,.84,.28,1) both;
+}
+
+.speaking-reward-label{
+  z-index:8;
+  line-height:.88;
+  min-width:min(92vw,760px);
+  text-align:center;
+  font-size:clamp(76px,23vw,154px);
+  letter-spacing:.045em;
+  color:#f5feff;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 16px #43e8ff,
+    0 0 38px #43e8ff,
+    0 0 64px rgba(141,98,255,.92),
+    0 0 92px rgba(255,79,216,.62);
+  filter:drop-shadow(0 16px 28px rgba(0,0,0,.35));
+}
+.speaking-reward-label small{
+  display:block;
+  margin-top:.18em;
+  font-size:.34em;
+  line-height:1;
+  color:#fff;
+  text-shadow:0 0 10px #fff,0 0 24px currentColor;
+}
+.speaking-reward-rays{
+  z-index:2;
+  width:142vmax;
+  height:142vmax;
+  opacity:.88;
+  filter:drop-shadow(0 0 12px rgba(67,232,255,.24));
+}
+.speaking-reward-ring{
+  z-index:6;
+  width:24vmax;
+  height:24vmax;
+  border-width:10px;
+  box-shadow:
+    0 0 22px #fff,
+    0 0 48px rgba(67,232,255,.9),
+    0 0 88px rgba(157,82,255,.62),
+    inset 0 0 38px rgba(255,255,255,.42);
+}
+.speaking-reward-ring-b{animation-delay:.12s}
+.speaking-reward-overlay .firework-field{z-index:5}
+.speaking-reward-overlay .firework>i{
+  width:8px;
+  height:18px;
+  box-shadow:0 0 9px currentColor,0 0 22px currentColor;
+}
+.speaking-reward-overlay .firework>b{
+  width:28px!important;
+  height:28px!important;
+  left:-14px!important;
+  top:-14px!important;
+}
+.speaking-reward-overlay i.speaking-star{
+  z-index:7;
+  font-size:clamp(22px,6.5vw,52px);
+  text-shadow:0 0 8px #fff,0 0 18px #43e8ff,0 0 34px #ff4fd8;
+}
+
+/* GOOD: already exciting, full-screen and unmistakable. */
+.speaking-reward-good{
+  background:
+    radial-gradient(circle at 50% 48%,rgba(56,255,181,.48) 0,rgba(40,212,255,.28) 26%,rgba(14,27,68,.76) 53%,rgba(3,4,16,.36) 78%);
+}
+.speaking-reward-good .speaking-reward-label{
+  color:#effff8;
+  animation:speakingMegaGood 2.55s cubic-bezier(.16,1.12,.26,1) both;
+  text-shadow:0 0 5px #fff,0 0 18px #54ffbe,0 0 42px #43e8ff,0 0 80px rgba(84,255,190,.72);
+}
+.speaking-reward-good .speaking-reward-good-burst{
+  z-index:3;
+  width:138vmax;
+  height:138vmax;
+  background:repeating-conic-gradient(from -6deg,rgba(104,255,197,.38) 0 4deg,transparent 4deg 10deg);
+  filter:drop-shadow(0 0 16px rgba(84,255,190,.45));
+  animation:speakingMegaBurst 2.65s cubic-bezier(.15,.85,.25,1) both;
+}
+.speaking-reward-good .speaking-reward-ring{
+  border-color:rgba(105,255,196,.94);
+  box-shadow:0 0 24px #dffff2,0 0 54px rgba(84,255,190,.88),0 0 92px rgba(67,232,255,.58),inset 0 0 38px rgba(84,255,190,.42);
+}
+
+/* GREAT: larger label, stronger pulse and purple/cyan impact. */
+.speaking-reward-great{
+  background:
+    radial-gradient(circle at 50% 48%,rgba(67,232,255,.38) 0,rgba(110,92,255,.34) 27%,rgba(17,19,62,.82) 55%,rgba(3,4,17,.34) 80%);
+}
+.speaking-reward-great .speaking-reward-label{
+  font-size:clamp(84px,25vw,166px);
+  color:#f8fdff;
+  animation:speakingMegaGreat 2.8s cubic-bezier(.16,1.08,.26,1) both;
+  text-shadow:0 0 5px #fff,0 0 18px #43e8ff,0 0 44px #6e5cff,0 0 86px rgba(255,79,216,.72);
+}
+.speaking-reward-great .speaking-reward-good-burst{
+  z-index:3;
+  width:146vmax;
+  height:146vmax;
+  background:repeating-conic-gradient(from 8deg,rgba(67,232,255,.32) 0 4deg,transparent 4deg 9deg);
+  animation:speakingMegaBurst 2.85s cubic-bezier(.15,.85,.25,1) both;
+}
+.speaking-reward-great .speaking-reward-ring{
+  border-color:rgba(117,235,255,.96);
+  box-shadow:0 0 28px #fff,0 0 58px #43e8ff,0 0 104px rgba(110,92,255,.82),inset 0 0 42px rgba(255,79,216,.36);
+}
+
+/* EXCELLENT: gold/magenta stadium-style celebration. */
+.speaking-reward-excellent{
+  background:
+    radial-gradient(circle at 50% 48%,rgba(255,211,92,.44) 0,rgba(255,79,216,.32) 28%,rgba(60,22,92,.82) 55%,rgba(4,4,18,.35) 82%);
+}
+.speaking-reward-excellent .speaking-reward-label{
+  font-size:clamp(88px,26vw,174px);
+  color:#fff9e9;
+  animation:speakingMegaExcellent 3.15s cubic-bezier(.16,1.08,.26,1) both;
+  text-shadow:0 0 5px #fff,0 0 20px #ffd55c,0 0 46px #ff4fd8,0 0 92px rgba(157,82,255,.78);
+}
+.speaking-reward-excellent .speaking-reward-ring{
+  border-color:rgba(255,225,122,.98);
+  box-shadow:0 0 30px #fff7cc,0 0 64px #ffd55c,0 0 112px rgba(255,79,216,.78),inset 0 0 46px rgba(255,223,104,.36);
+}
+
+/* PERFECT: maximum impact. */
+.speaking-reward-perfect{
+  background:
+    radial-gradient(circle at 50% 46%,rgba(255,247,184,.56) 0,rgba(255,79,216,.38) 24%,rgba(104,47,174,.46) 42%,rgba(23,16,64,.88) 62%,rgba(3,3,15,.4) 86%);
+}
+.speaking-reward-perfect::before{
+  background:radial-gradient(circle at 50% 48%,rgba(255,255,255,1) 0,rgba(255,231,127,.62) 10%,rgba(255,79,216,.32) 25%,transparent 52%);
+  animation-duration:1.35s;
+}
+.speaking-reward-perfect .speaking-reward-label{
+  font-size:clamp(98px,29vw,190px);
+  color:#fff8fd;
+  animation:speakingMegaPerfect 3.55s cubic-bezier(.13,1.1,.22,1) both;
+  text-shadow:0 0 6px #fff,0 0 22px #ffd75f,0 0 48px #ff4fd8,0 0 82px #9d52ff,0 0 122px rgba(67,232,255,.72);
+}
+.speaking-reward-perfect .speaking-reward-rays{
+  width:160vmax;
+  height:160vmax;
+  background:repeating-conic-gradient(from 0deg,rgba(255,226,113,.46) 0 5deg,transparent 5deg 11deg);
+  animation-duration:3.5s;
+}
+.speaking-reward-perfect .speaking-reward-ring{
+  width:28vmax;
+  height:28vmax;
+  border-width:12px;
+  border-color:rgba(255,239,167,.98);
+  box-shadow:0 0 34px #fff,0 0 72px #ffd75f,0 0 122px #ff4fd8,0 0 164px rgba(67,232,255,.58),inset 0 0 52px rgba(255,255,255,.5);
+}
+.speaking-reward-perfect i.speaking-star{
+  font-size:clamp(26px,7.5vw,60px);
+}
+.speaking-reward-perfect .firework>i{
+  width:9px;
+  height:21px;
+}
+
+@keyframes speakingMegaFlash{
+  0%{opacity:0;transform:scale(.45)}
+  9%{opacity:1;transform:scale(.9)}
+  28%{opacity:.78;transform:scale(1.05)}
+  100%{opacity:0;transform:scale(1.42)}
+}
+@keyframes speakingMegaSweep{
+  0%{opacity:0;transform:scale(.35) rotate(-20deg)}
+  24%{opacity:.9;transform:scale(.86) rotate(-4deg)}
+  58%{opacity:.44;transform:scale(1.08) rotate(10deg)}
+  100%{opacity:0;transform:scale(1.3) rotate(26deg)}
+}
+@keyframes speakingMegaBurst{
+  0%{opacity:0;transform:scale(.26) rotate(-18deg)}
+  22%{opacity:.95;transform:scale(.72) rotate(-5deg)}
+  55%{opacity:.72;transform:scale(1.02) rotate(8deg)}
+  100%{opacity:0;transform:scale(1.26) rotate(24deg)}
+}
+@keyframes speakingMegaGood{
+  0%{opacity:0;transform:scale(.18) rotate(-6deg);filter:blur(10px)}
+  19%{opacity:1;transform:scale(1.28) rotate(1deg);filter:blur(0)}
+  36%{transform:scale(.93)}
+  52%{transform:scale(1.07)}
+  72%{opacity:1;transform:scale(1)}
+  100%{opacity:0;transform:scale(1.12)}
+}
+@keyframes speakingMegaGreat{
+  0%{opacity:0;transform:scale(.16) rotate(-7deg);filter:blur(12px)}
+  17%{opacity:1;transform:scale(1.34) rotate(2deg);filter:blur(0)}
+  34%{transform:scale(.9) rotate(-1deg)}
+  48%{transform:scale(1.1)}
+  64%{transform:scale(.98)}
+  79%{opacity:1;transform:scale(1.04)}
+  100%{opacity:0;transform:scale(1.16)}
+}
+@keyframes speakingMegaExcellent{
+  0%{opacity:0;transform:scale(.14) rotate(-8deg);filter:blur(13px)}
+  15%{opacity:1;transform:scale(1.38) rotate(2deg);filter:blur(0)}
+  30%{transform:scale(.88) rotate(-1deg)}
+  44%{transform:scale(1.12)}
+  58%{transform:scale(.97)}
+  73%{transform:scale(1.05)}
+  84%{opacity:1;transform:scale(1)}
+  100%{opacity:0;transform:scale(1.18)}
+}
+@keyframes speakingMegaPerfect{
+  0%{opacity:0;transform:scale(.1) rotate(-9deg);filter:blur(15px)}
+  13%{opacity:1;transform:scale(1.44) rotate(2deg);filter:blur(0)}
+  26%{transform:scale(.84) rotate(-1deg)}
+  39%{transform:scale(1.16)}
+  51%{transform:scale(.95)}
+  63%{transform:scale(1.09)}
+  75%{transform:scale(.99)}
+  86%{opacity:1;transform:scale(1.04)}
+  100%{opacity:0;transform:scale(1.22)}
+}
+
+@media(max-width:520px){
+  .speaking-reward-label{min-width:96vw;font-size:clamp(68px,25vw,120px)}
+  .speaking-reward-great .speaking-reward-label{font-size:clamp(74px,27vw,132px)}
+  .speaking-reward-excellent .speaking-reward-label{font-size:clamp(78px,28vw,138px)}
+  .speaking-reward-perfect .speaking-reward-label{font-size:clamp(84px,30vw,148px)}
+  .speaking-reward-ring{border-width:8px}
+  .speaking-reward-perfect .speaking-reward-ring{border-width:10px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .speaking-reward-overlay::before,
+  .speaking-reward-overlay::after,
+  .speaking-reward-label,
+  .speaking-reward-good-burst{animation:none!important}
+}
